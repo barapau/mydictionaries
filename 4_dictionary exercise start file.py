@@ -1,7 +1,9 @@
 # This program uses a dictionary as a deck of cards.
+import random 
 
 def main():
     # Create a deck of cards.
+    deck_dict = create_deck()
    
 
     # Get the number of cards to deal.
@@ -10,6 +12,7 @@ def main():
 
 
     # Deal the cards.
+    deal_cards(deck_dict, num_cards) #not assign a variable cause its not returning a value
 
 
     
@@ -17,7 +20,7 @@ def main():
 
 # The create_deck function returns a dictionary
 # representing a deck of cards.
-def create_deck():
+def create_deck(): 
     # Create a dictionary with each card and its value
     # stored as key-value pairs.
     deck = {'Ace of Spades':1, '2 of Spades':2, '3 of Spades':3,
@@ -43,9 +46,10 @@ def create_deck():
             '7 of Diamonds':7, '8 of Diamonds':8, '9 of Diamonds':9,
             '10 of Diamonds':10, 'Jack of Diamonds':10,
             'Queen of Diamonds':10, 'King of Diamonds': 10}
+            #because the name of the card is unique #KEYS NEED TO BE UNIQUE, the value can be repeated, that why the numbers are  the values
 
     # Return the deck.
-
+    return deck #if you are returning you ned to  assign thw function to a variable dict = function
 
 
 
@@ -54,24 +58,34 @@ def create_deck():
 
 def deal_cards(deck, number):
     # Initialize an accumulator for the hand value.
+    hand_value = 0
+
 
     
     
     # DATA VALIDATION
     # Make sure the number of cards to deal is not
     # greater than the number of cards in the deck (52).
+    if number > len(deck):
+        number =  len(deck)  #you can also use a while loop asking again for the number 
 
     
     
 
     # Deal the cards and accumulate their values.
-    
+    for num in range(number):  #num is irrelevant, we are repeating the for loop as long as the user put in the num
+        card = random.choice(list(deck)) #it is going to create a list of the keys
+        value =  deck[card]   
+        print(card)
+        hand_value += value
+
+
 
 
     
 
     # Display the value of the hand.
-
+    print(hand_value)
     
     
 

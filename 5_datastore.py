@@ -47,3 +47,18 @@ datastore = { "medical":[
 
       ]
 }
+#1 key medical with the object being a list(because it starts with [], it is list of 5 dictionaries)
+outfile = open('retail_space.csv', 'w')
+outfile.write('room-number,use,sq-ft,price')
+
+list1 = datastore["medical"]
+
+for dict in list1:
+  room_number  = dict['room-number']
+  use = dict['use']
+  sq = dict['sq-ft']
+  pric = dict['price']
+
+  outfile.write(str(room_number)+ ',' + use  + ',' + str(sq) + ',' +  str(pric) + '\n')
+
+outfile.close()
