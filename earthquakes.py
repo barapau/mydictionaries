@@ -18,8 +18,8 @@ for earthquakes in earth_list:
    if earthquakes['properties']['mag'] > 6:
       eq_dict['location'].append(earthquakes['properties']['place'])
       eq_dict['magnitude'].append(earthquakes['properties']['mag'])
-      eq_dict['longitude'].append(earthquakes['geometry']['coordinates'][1])
-      eq_dict['latitude'].append(earthquakes['geometry']['coordinates'][2])
+      eq_dict['longitude'].append(earthquakes['geometry']['coordinates'][0])
+      eq_dict['latitude'].append(earthquakes['geometry']['coordinates'][1])
 print(eq_dict)
 print()
 
