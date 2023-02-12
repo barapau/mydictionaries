@@ -1,6 +1,6 @@
 #import 
 import json
-FILE = open ('eq_data.json')
+FILE = open('eq_data.json', 'r')
 earth_dic = json.load(FILE)
 
 #1) print out the number of earthquakes
@@ -19,13 +19,14 @@ for eq in earth_list:
    location = eq['properties']['place']
    if eq['properties']['mag'] > 6:
       eq_dict1['location'] = {'mag': eq['properties']['mag'], 'lat': eq['geometry']['coordinates'][1], 'lon': eq['geometry']['coordinates'][0]}
+   
 
-i = 0
-while i <= 3:
-   for k,j in eq_dict1.items():
-      print(k, ':', j[i]) 
-   i += 1
-   print()
+#i = 0
+#while i <= 3:
+   #for k,j in eq_dict1.items():
+      #print(k, j) 
+   #i += 1
+   
 
 #for earthquakes in earth_list:
    #if earthquakes['properties']['mag'] > 6:
