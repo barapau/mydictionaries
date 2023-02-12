@@ -5,22 +5,19 @@ phonebook = {'Chris':'555−1111',
              'Katie':'555−2222',
              'Joanne':'555−3333'} #3 elements 
 
+
+print()
+print('*****  start section 1 - print dictionary ********')
+print()
+
 mydictionary = dict(m=8, n=9)
 print(mydictionary)
 print(f"Number of key-value pairs: {len(phonebook)}")
 
 
-#print()
-#print('*****  start section 1 - print dictionary ********')
-#print()
-
-
-
-
-
-#print()
-#print('*****  end section 1 ********')
-#print()
+print()
+print('*****  end section 1 ********')
+print()
 
 
 

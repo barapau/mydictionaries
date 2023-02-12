@@ -212,11 +212,11 @@ for produce in ProduceDictionary:
     amt_sold = ProduceDictionary[produce]['amt_sold']
     stated_total = ProduceDictionary[produce]['total']
     
-    calc_total = round(cost * amt_sold, 2)
+    calc_total = round(cost * amt_sold, 2) #why 2?
 
     if calc_total != stated_total:
         print(f"ProduceName: {produce}")
-        print(f"Calculated Total: ${calc_total:.2f}")
+        print(f"Calculated Total: ${calc_total:.2f}") #Why $?
         print(f"Stated Total: ${stated_total:.2f}")
         print()
         print()
