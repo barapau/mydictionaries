@@ -87,13 +87,13 @@ print()
 
 
 for key in phonebook:
-    print(f"The key is: {key} and the value is {phonebook(key)}")
+    print(f"The key is: {key} and the value is {phonebook[key]}")
 
 for value in phonebook.values():
     print(value)
 
-for k,v in phonebook.iteam():
-    print()
+for k,v in phonebook.items():
+    print(k,v)
 
 for ph_tuple in phonebook.items():
     print(ph_tuple)
