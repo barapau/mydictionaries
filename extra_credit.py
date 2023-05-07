@@ -7,9 +7,11 @@
 
 infile = open('BookJohn.txt', 'r')
 john = infile.read()
+john1 = john.split()
+
 words_to_count = ['Father', 'God', 'Christ', 'Spirit', 'spirit', 'life', 'man']
 
-word_counts = {word: john.count(word) for word in words_to_count}
+word_counts = {word: john1.count(word) for word in words_to_count}
 
 for word, count in word_counts.items():
     print(f"{word}: {count}", sep='')
